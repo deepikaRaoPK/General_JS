@@ -32,26 +32,14 @@ function test3(){
 ////resut: [20,40,23,66,66]
 
 
-function convertArrOfObjToObj(arr, key2Bkey){
-  const createdObj = {}
-  let newObj = arr.reduce((createdObjPassed, objInArr)=>{
-    return {
-      ...createdObjPassed,
-      [objInArr[key2Bkey]] : objInArr
-    }
-  },createdObj)
-
-  console.log(newObj)
-
+function test4(){
+  let lst1 = [20,40,23,44,66]
+  let lst2 = [...lst1]
+  lst2.push(777)
+  console.log(lst1)
+  console.log(lst2)
 }
+// test4()
+////resut: [20,40,23,44,66]
+////       [20,40,23,44,66, 777]
 
-
-convertArrOfObjToObj([
-  { id: 111, name: "John", age: 29 },
-  { id: 112, name: "Sarah", age: 25 },
-  { id: 122, name: "Kate", age: 22 },
-  { id: 123, name: "Tom", age: 21 },
-  { id: 125, name: "Emma", age: 24 },
-],
-"id"
-)
